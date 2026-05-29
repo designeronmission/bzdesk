@@ -8,7 +8,7 @@
     <meta name="description" content="Streamline workflows, boost sales, and reduce costs with BZDesk’s intelligent automation. Centralize customer data, automate documents, and gain real-time insights. Start your free trial today!"/>
 
     <!-- Site Title -->
-    <title>BZDesk</title>
+    <title>BZDesk - Contact Us</title>
 
 
     <!-- Place favicon.ico in the root directory -->
@@ -30,6 +30,43 @@
      <link rel="stylesheet" href="assets/css/bzdesk-main.css" />
      <link rel="stylesheet" href="assets/css/meanmenu.css" />
      <link rel="stylesheet" href="assets/css/responsive.css" />
+       <!-- Intl Tel Input CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
+    <style>
+         .contact-form-box h3 {
+            padding: 20px 10px 50px;
+        }
+
+        .required-star {
+            color: red;
+        }
+
+
+        .form_group select,
+        .form_group .nice-select,
+        .form_group input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
+        .form_group textarea {
+            display: block;
+            width: 100%;
+            background: var(--bz-black-2);
+            border: 1px solid var(--bz-grey-4);
+            font-size: 16px;
+            line-height: 1;
+            color: #6c757d;
+            padding: 20px 20px;
+            border-radius: 8px;
+            transition: all 0.3s 0s ease-out;
+            outline: none;
+            height: auto;
+        }
+
+        label {
+            position: relative;
+            text-align: left;
+            display: block;
+            margin-bottom: 15px;
+        }
+    </style>
 
 </head>
 
@@ -179,30 +216,36 @@
                       <form id="contact-form">
                          <div class="row gx-3">
 
-                            <div class="col-sm-12 input-boxes">
-                               <div class="form_group">
-                                  <input type="text" name="conName" id="conName" placeholder="Full name"
-                                     autocomplete="off"/>
-                               </div>
-                            </div>
-                        <!--     <div class="col-sm-12 input-boxes">
-                               <div class="form_group">
-                                  <input type="text" name="conLName" id="conLName" placeholder="Last name"
-                                     autocomplete="off" />
-                               </div>
-                            </div> -->
-                            <div class="col-sm-12 input-boxes">
-                               <div class="form_group">
-                                  <input type="email" name="conEmail" id="conEmail" placeholder="Email address"
-                                     autocomplete="off" />
-                               </div>
-                            </div>
-                            <div class="col-sm-12 input-boxes">
-                               <div class="form_group">
-                                  <input type="tel" name="conPhone" id="conPhone" placeholder="Phone number"
-                                     autocomplete="off" />
-                               </div>
-                            </div>
+
+                                        <div class="col-sm-12 input-boxes">
+                                            <div class="form_group">
+                                                <label for="conName">Full Name <span
+                                                        class="required-star">*</span></label>
+                                                <input type="text" name="conName" id="conName"
+                                                    placeholder="Enter your full name" autocomplete="name" required />
+                                                <span id="conName-error"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 input-boxes">
+                                            <div class="form_group">
+                                                <label for="conEmail">Email Address <span
+                                                        class="required-star">*</span></label>
+                                                <input type="email" name="conEmail" id="conEmail"
+                                                    placeholder="you@company.com" autocomplete="email" required />
+                                                <span id="conEmail-error"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12 input-boxes">
+                                            <div class="form_group phone-input-container">
+                                                <label for="conPhone">Phone Number <span
+                                                        class="required-star">*</span></label>
+                                                <input type="tel" name="conPhone" id="conPhone"
+                                                    placeholder="Phone number" autocomplete="tel" />
+                                                <span id="conPhone-error"></span>
+                                            </div>
+                                        </div>
 
                             <div class="col-sm-12 input-boxes">
                                 <div class="form_group">

@@ -14682,10 +14682,7 @@ START: Theme Header CSS
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  .service-item.style-10.current .service-icon img {
-    -webkit-filter: brightness(0) invert(1);
-            filter: brightness(0) invert(1);
-  }
+
   .service-item.style-10 .service-icon {
     max-width: 40px;
     width: 100%;
@@ -15594,3 +15591,11 @@ START: Theme Header CSS
     background-color: var(--bz-theme-accent-1);
   }
   
+
+
+
+
+  .bz-heros{
+    padding-top: 40px;
+    width: 100%;
+  }

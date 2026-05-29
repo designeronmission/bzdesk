@@ -11,7 +11,78 @@
     <!-- Site Title -->
     <title>BZDesk</title>
 
+<style>
+    /* Services Widget Container */
+.services-widget.style-10 {
+    position: relative;
+}
 
+/* Service Item Styles */
+.service-item.style-10 {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.left-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Icon Container Styles */
+.service-icon {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* Default Icon Image (colored/normal version) */
+.default-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* White Icon Image (shown on hover) */
+.white-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* On Hover - swap the images */
+.service-item.style-10:hover .default-icon {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+.service-item.style-10:hover .white-icon {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+</style>
     <!-- Place favicon.ico in the root directory -->
     <link rel="apple-touch-icon" href="images/logo/fav-icon.png" />
     <link rel="shortcut icon" type="image/png" href="images/logo/fav-icon.png" />
@@ -238,155 +309,150 @@
                                     </div>
                                 </div>
 
-                                <!--  <div class="sec-text">
-                        <span class="subtitle wow fadeInUp" data-wow-delay=".3s">My Services</span>
-                        <h2 class="title wow fadeInUp" data-wow-delay=".4s">Here's how I can Be Best help!</h2>
-                        <div class="desc wow fadeInUp" data-wow-delay=".5s">
-                            <p>I break down complexd user experiences problems create integrity focused to solutions that connect billions of business people.</p>
-                        </div>
-                    </div> -->
-
-
                                 <div class="service-10-images wow fadeInUp" data-wow-delay=".7s">
                                     <img src="images/mockups/iphone-mockup.png" alt="Images" class="iphone-mockups">
                                 </div>
                             </div>
-                            <div class="services-widget style-10 position-relative">
-                                <div class="service-item style-10 current d-flex flex-wrap align-items-center wow fadeInUp"
-                                    data-wow-delay=".5s">
-                                    <div class="left-box d-flex">
-                                        <div class="service-icon">
-                                            <img src="images/icons/New folder/proposal.png" alt="Icons">
-                                        </div>
-                                        <div class="services-content">
-                                            <h3 class="service-title">Start Your Proposal</h3>
-                                            <p>
-                                                Kick off your proposal quickly. Just click "Start," and you're on your
-                                                way!
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="service-arrow">
-                                        <i class="fa-thin fa-arrow-right-long"></i>
-                                    </div>
-                                    <button data-mfp-src=" " class=" "></button>
-                                </div>
-                                <div class="service-item style-10 d-flex flex-wrap align-items-center wow fadeInUp"
-                                    data-wow-delay=".6s">
-                                    <div class="left-box d-flex">
-                                        <div class="service-icon">
-                                            <img src="images/icons/New folder/select product.png" alt="Icons">
-                                        </div>
-                                        <div class="services-content">
-                                            <h3 class="service-title">Pick Your Products</h3>
-                                            <p>
-                                                Easily select the items or services you want to include in your
-                                                proposal. It’s fast and hassle-free.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="service-arrow">
-                                        <i class="fa-thin fa-arrow-right-long"></i>
-                                    </div>
-                                    <button data-mfp-src="" class=" "></button>
-                                </div>
-                                <div class="service-item style-10 d-flex flex-wrap align-items-center wow fadeInUp"
-                                    data-wow-delay=".7s">
-                                    <div class="left-box d-flex">
-                                        <div class="service-icon">
-                                            <img src="images/icons/New folder/specific.png" alt="Icons">
-                                        </div>
-                                        <div class="services-content">
-                                            <h3 class="service-title"> Define Specific</h3>
-                                            <p> Customize your selections by adding the specifics your client needs,
-                                                like descriptions or quantities.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="service-arrow">
-                                        <i class="fa-thin fa-arrow-right-long"></i>
-                                    </div>
-                                    <button data-mfp-src=" " class=" "></button>
-                                </div>
-                                <div class="service-item style-10 d-flex flex-wrap align-items-center wow fadeInUp"
-                                    data-wow-delay=".8s">
-                                    <div class="left-box d-flex">
-                                        <div class="service-icon">
-                                            <img src="images/icons/New folder/template.png" alt="Icons">
-                                        </div>
-                                        <div class="services-content">
-                                            <h3 class="service-title">Choose a Template</h3>
-                                            <p>
-                                                Pick a stylish template to make your proposal stand out.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="service-arrow">
-                                        <i class="fa-thin fa-arrow-right-long"></i>
-                                    </div>
-                                    <button data-mfp-src=" " class=" "></button>
-                                </div>
-
-                                <div class="service-item style-10 d-flex flex-wrap align-items-center wow fadeInUp"
-                                    data-wow-delay=".8s">
-                                    <div class="left-box d-flex">
-                                        <div class="service-icon">
-                                            <img src="images/icons/New folder/preview.png" alt="Icons">
-                                        </div>
-                                        <div class="services-content">
-                                            <h3 class="service-title">Preview It</h3>
-                                            <p>
-                                                Double-check everything before sending. You can view how the final
-                                                proposal will look.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="service-arrow">
-                                        <i class="fa-thin fa-arrow-right-long"></i>
-                                    </div>
-                                    <button data-mfp-src=" " class=" "></button>
-                                </div>
-
-                                <div class="service-item style-10 d-flex flex-wrap align-items-center wow fadeInUp"
-                                    data-wow-delay=".8s">
-                                    <div class="left-box d-flex">
-                                        <div class="service-icon">
-                                            <img src="images/icons/New folder/approve.png" alt="Icons">
-                                        </div>
-                                        <div class="services-content">
-                                            <h3 class="service-title">Approve and Finalize</h3>
-                                            <p>
-                                                Happy with your proposal? Approve it in one step and get ready to share.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="service-arrow">
-                                        <i class="fa-thin fa-arrow-right-long"></i>
-                                    </div>
-                                    <button data-mfp-src=" " class=" "></button>
-                                </div>
-
-                                <div class="service-item style-10 d-flex flex-wrap align-items-center wow fadeInUp"
-                                    data-wow-delay=".8s">
-                                    <div class="left-box d-flex">
-                                        <div class="service-icon">
-                                            <img src="images/icons/New folder/customer.png" alt="Icons">
-                                        </div>
-                                        <div class="services-content">
-                                            <h3 class="service-title">Send to Your Customer</h3>
-                                            <p>
-                                                Send your professional proposal directly to your client with ease. It’s
-                                                that simple!
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="service-arrow">
-                                        <i class="fa-thin fa-arrow-right-long"></i>
-                                    </div>
-                                    <button data-mfp-src=" " class=" "></button>
-                                </div>
-                                <div class="active-bg"></div>
-                            </div>
+                            <!-- Your Services Widget Section with Dual Icons (Normal + White on Hover) -->
+<div class="services-widget style-10 position-relative">
+    
+    <!-- Service Item 1: Start Your Proposal -->
+    <div class="service-item style-10 current d-flex flex-wrap align-items-center wow fadeInUp"
+        data-wow-delay=".5s">
+        <div class="left-box d-flex">
+            <div class="service-icon">
+                <!-- Normal Icon (Colored/Dark version) -->
+                <img class="default-icon" src="images/icons/New folder/proposal-white.png" alt="Proposal Icon">
+                <!-- White Icon (Shown on hover) - Replace with your white icon path -->
+                <img class="white-icon" src="images/icons/New folder/proposal.png" alt="Proposal Icon White">
+            </div>
+            <div class="services-content">
+                <h3 class="service-title">Start Your Proposal</h3>
+                <p>Kick off your proposal quickly. Just click "Start," and you're on your way!</p>
+            </div>
+        </div>
+        <div class="service-arrow">
+            <i class="fa-thin fa-arrow-right-long"></i>
+        </div>
+        <button data-mfp-src=" " class=" "></button>
+    </div>
+    
+    <!-- Service Item 2: Pick Your Products -->
+    <div class="service-item style-10 d-flex flex-wrap align-items-center wow fadeInUp"
+        data-wow-delay=".6s">
+        <div class="left-box d-flex">
+            <div class="service-icon">
+                <img class="default-icon" src="images/icons/New folder/select product-white.png" alt="Products Icon">
+                <img class="white-icon" src="images/icons/New folder/select product.png" alt="Products Icon White">
+            </div>
+            <div class="services-content">
+                <h3 class="service-title">Pick Your Products</h3>
+                <p>Easily select the items or services you want to include in your proposal. It's fast and hassle-free.</p>
+            </div>
+        </div>
+        <div class="service-arrow">
+            <i class="fa-thin fa-arrow-right-long"></i>
+        </div>
+        <button data-mfp-src="" class=" "></button>
+    </div>
+    
+    <!-- Service Item 3: Define Specific -->
+    <div class="service-item style-10 d-flex flex-wrap align-items-center wow fadeInUp"
+        data-wow-delay=".7s">
+        <div class="left-box d-flex">
+            <div class="service-icon">
+                <img class="default-icon" src="images/icons/New folder/specific-white.png" alt="Specifics Icon">
+                <img class="white-icon" src="images/icons/New folder/specific.png" alt="Specifics Icon White">
+            </div>
+            <div class="services-content">
+                <h3 class="service-title">Define Specific</h3>
+                <p>Customize your selections by adding the specifics your client needs, like descriptions or quantities.</p>
+            </div>
+        </div>
+        <div class="service-arrow">
+            <i class="fa-thin fa-arrow-right-long"></i>
+        </div>
+        <button data-mfp-src=" " class=" "></button>
+    </div>
+    
+    <!-- Service Item 4: Choose a Template -->
+    <div class="service-item style-10 d-flex flex-wrap align-items-center wow fadeInUp"
+        data-wow-delay=".8s">
+        <div class="left-box d-flex">
+            <div class="service-icon">
+                <img class="default-icon" src="images/icons/New folder/template-white.png" alt="Template Icon">
+                <img class="white-icon" src="images/icons/New folder/template.png" alt="Template Icon White">
+            </div>
+            <div class="services-content">
+                <h3 class="service-title">Choose a Template</h3>
+                <p>Pick a stylish template to make your proposal stand out.</p>
+            </div>
+        </div>
+        <div class="service-arrow">
+            <i class="fa-thin fa-arrow-right-long"></i>
+        </div>
+        <button data-mfp-src=" " class=" "></button>
+    </div>
+    
+    <!-- Service Item 5: Preview It -->
+    <div class="service-item style-10 d-flex flex-wrap align-items-center wow fadeInUp"
+        data-wow-delay=".8s">
+        <div class="left-box d-flex">
+            <div class="service-icon">
+                <img class="default-icon" src="images/icons/New folder/preview-white.png" alt="Preview Icon">
+                <img class="white-icon" src="images/icons/New folder/preview.png" alt="Preview Icon White">
+            </div>
+            <div class="services-content">
+                <h3 class="service-title">Preview It</h3>
+                <p>Double-check everything before sending. You can view how the final proposal will look.</p>
+            </div>
+        </div>
+        <div class="service-arrow">
+            <i class="fa-thin fa-arrow-right-long"></i>
+        </div>
+        <button data-mfp-src=" " class=" "></button>
+    </div>
+    
+    <!-- Service Item 6: Approve and Finalize -->
+    <div class="service-item style-10 d-flex flex-wrap align-items-center wow fadeInUp"
+        data-wow-delay=".8s">
+        <div class="left-box d-flex">
+            <div class="service-icon">
+                <img class="default-icon" src="images/icons/New folder/approve-white.png" alt="Approve Icon">
+                <img class="white-icon" src="images/icons/New folder/approve.png" alt="Approve Icon White">
+            </div>
+            <div class="services-content">
+                <h3 class="service-title">Approve and Finalize</h3>
+                <p>Happy with your proposal? Approve it in one step and get ready to share.</p>
+            </div>
+        </div>
+        <div class="service-arrow">
+            <i class="fa-thin fa-arrow-right-long"></i>
+        </div>
+        <button data-mfp-src=" " class=" "></button>
+    </div>
+    
+    <!-- Service Item 7: Send to Your Customer -->
+    <div class="service-item style-10 d-flex flex-wrap align-items-center wow fadeInUp"
+        data-wow-delay=".8s">
+        <div class="left-box d-flex">
+            <div class="service-icon">
+                <img class="default-icon" src="images/icons/New folder/customer-white.png" alt="Customer Icon">
+                <img class="white-icon" src="images/icons/New folder/customer.png" alt="Customer Icon White">
+            </div>
+            <div class="services-content">
+                <h3 class="service-title">Send to Your Customer</h3>
+                <p>Send your professional proposal directly to your client with ease. It's that simple!</p>
+            </div>
+        </div>
+        <div class="service-arrow">
+            <i class="fa-thin fa-arrow-right-long"></i>
+        </div>
+        <button data-mfp-src=" " class=" "></button>
+    </div>
+    
+    <div class="active-bg"></div>
+</div>
                         </div>
                     </div>
                 </div>

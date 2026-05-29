@@ -9,7 +9,7 @@
         content="Streamline workflows, boost sales, and reduce costs with BZDesk's intelligent automation. Centralize customer data, automate documents, and gain real-time insights. Start your free trial today!" />
 
     <!-- Site Title -->
-    <title>BZDesk - Request a Demo</title>
+    <title>BZDesk - Request a Demo | Quotation Automation</title>
 
     <!-- Place favicon.ico in the root directory -->
     <link rel="apple-touch-icon" href="images/logo/fav-icon.png" />
@@ -35,41 +35,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
 
     <style>
-
-        .contact-form-box h3 {
-            padding: 20px 10px 50px;
-        }
-
-        .required-star {
-            color: red;
-        }
-
-
-        .form_group select,
-        .form_group .nice-select,
-        .form_group input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
-        .form_group textarea {
-            display: block;
-            width: 100%;
-            background: var(--bz-black-2);
-            border: 1px solid var(--bz-grey-4);
-            font-size: 16px;
-            line-height: 1;
-            color: #6c757d;
-            padding: 20px 20px;
-            border-radius: 8px;
-            transition: all 0.3s 0s ease-out;
-            outline: none;
-            height: auto;
-        }
-
-        label {
-            position: relative;
-            text-align: left;
-            display: block;
-            margin-bottom: 15px;
-        }
-
         .iti__country-list {
             position: absolute;
             z-index: 2;
@@ -125,15 +90,91 @@
             box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.15);
         }
 
+        /* Select Dropdown Styling */
+        .form_group select {
+            width: 100%;
+            height: 50px;
+            background: #f8f9fc;
+            border: 1px solid #e5e8f0;
+            border-radius: 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #1e2a41;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%233366ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 14px;
+        }
+
+        .form_group select:focus {
+            border-color: #3366ff;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(51, 102, 255, 0.1);
+        }
+
+        .form_group select.valid {
+            border-color: #28a745;
+            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.15);
+        }
+
+        /* Input fields styling */
+        .form_group input,
+        .form_group textarea {
+            width: 100%;
+            background: #f8f9fc;
+            border: 1px solid #e5e8f0;
+            border-radius: 10px;
+            padding: 12px 15px;
+            font-size: 16px;
+            color: #1e2a41;
+            transition: all 0.3s ease;
+        }
+
+        .form_group input:focus,
+        .form_group textarea:focus {
+            border-color: #3366ff;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(51, 102, 255, 0.1);
+        }
+
+        .form_group label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #1e2a41;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .required-star {
+            color: #ee1f24;
+            margin-left: 3px;
+        }
+
         /* Override any conflicting styles */
         .form_group .phone-input-container input {
             margin-bottom: 0;
         }
 
+        .input-boxes .form_group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        /* Error message styling */
         #conName-error,
         #conEmail-error,
         #conPhone-error,
-        #conMessage-error {
+        #conMessage-error,
+        #companyName-error,
+        #companySize-error,
+        #industry-error,
+        #quoteVolume-error,
+        #teamMembers-error,
+        #currentProcess-error {
             color: #ee1f24;
             text-align: left;
             justify-content: center;
@@ -144,13 +185,9 @@
         }
 
         /* Validation Styles */
-        .input-boxes .form_group {
-            position: relative;
-            margin-bottom: 5px;
-        }
-
         .input-boxes .form_group input.valid,
-        .input-boxes .form_group textarea.valid {
+        .input-boxes .form_group textarea.valid,
+        .input-boxes .form_group select.valid {
             border-color: #28a745;
             box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.15);
         }
@@ -177,10 +214,34 @@
             display: block;
         }
 
+        /* Section divider styling */
+        .form-section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1e2a41;
+            margin: 10px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e8f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-section-title i {
+            color: #3366ff;
+            font-size: 20px;
+        }
+
         /* Ensure responsive design */
         @media (max-width: 768px) {
             .phone-input-container input {
                 padding-left: 48px;
+                font-size: 14px;
+            }
+
+            .form_group input,
+            .form_group select,
+            .form_group textarea {
                 font-size: 14px;
             }
         }
@@ -236,8 +297,8 @@
                                 </li>
                                 <li><a href="howitworks.html">How It Works</a></li>
                                 <li><a href="benefits.html">Benefits</a></li>
-                                <li><a class="current-menu-item" href="request.html">Request A Demo</a></li>
-                                <li><a  href="contactus.html">Reach Us</a></li>
+                                <li><a href="request.html">Request A Demo</a></li>
+                                <li><a class="current-menu-item" href="contactus.html">Reach Us</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -274,8 +335,8 @@
                                 </li>
                                 <li><a href="howitworks.html">How It Works</a></li>
                                 <li><a href="benefits.html">Benefits</a></li>
-                                <li><a class="current-menu-item" href="request.html">Request A Demo</a></li>
-                                <li><a  href="contactus.html">Reach Us</a></li>
+                                <li><a href="request.html">Request A Demo</a></li>
+                                <li><a class="current-menu-item" href="contactus.html">Reach Us</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -311,28 +372,34 @@
                     <div class="col-lg-12 col-md-12 order-2 order-md-1 signup-form">
                         <div class="contact-form-box wow fadeInLeft glass-card" data-wow-delay=".3s">
                             <h3>Request a Demo</h3>
+                            <p style="margin-bottom: 20px; color: #6c757d;">Get a personalized demo of BZDesk's quotation automation platform. Fill out the form and our team will contact you within 24 hours.</p>
 
                             <div id="form-feedback" class="form-feedback"></div>
 
                             <div class="bz-contact-form">
                                 <form id="contact-form" novalidate>
-                                    <div class="row col-lg-12 gx-3">
+                                    <div class="row gx-3">
 
+                                        <!-- Contact Information Section -->
+                                        <div class="col-12">
+                                            <div class="form-section-title">
+                                                <i class="fa-regular fa-user"></i>
+                                                <span>Contact Information</span>
+                                            </div>
+                                        </div>
 
                                         <div class="col-sm-4 input-boxes">
                                             <div class="form_group">
-                                                <label for="conName">Full Name <span
-                                                        class="required-star">*</span></label>
-                                                <input type="text" name="conName" id="conName"
-                                                    placeholder="Enter your full name" autocomplete="name" required />
+                                                <label for="conName">Full Name <span class="required-star">*</span></label>
+                                                <input type="text" name="conName" id="conName" placeholder="Enter your full name"
+                                                    autocomplete="name" required />
                                                 <span id="conName-error"></span>
                                             </div>
                                         </div>
 
                                         <div class="col-sm-4 input-boxes">
                                             <div class="form_group">
-                                                <label for="conEmail">Email Address <span
-                                                        class="required-star">*</span></label>
+                                                <label for="conEmail">Email Address <span class="required-star">*</span></label>
                                                 <input type="email" name="conEmail" id="conEmail"
                                                     placeholder="you@company.com" autocomplete="email" required />
                                                 <span id="conEmail-error"></span>
@@ -341,18 +408,24 @@
 
                                         <div class="col-sm-4 input-boxes">
                                             <div class="form_group phone-input-container">
-                                                <label for="conPhone">Phone Number <span
-                                                        class="required-star">*</span></label>
+                                                <label for="conPhone">Phone Number <span class="required-star">*</span></label>
                                                 <input type="tel" name="conPhone" id="conPhone"
                                                     placeholder="Phone number" autocomplete="tel" />
                                                 <span id="conPhone-error"></span>
                                             </div>
                                         </div>
 
+                                        <!-- Business Information Section -->
+                                        <div class="col-12">
+                                            <div class="form-section-title">
+                                                <i class="fa-regular fa-building"></i>
+                                                <span>Business Information</span>
+                                            </div>
+                                        </div>
 
                                         <div class="col-sm-4 input-boxes">
                                             <div class="form_group">
-                                                <label for="companyName">Company Name</label>
+                                                <label for="companyName">Company Name <span class="required-star">*</span></label>
                                                 <input type="text" name="companyName" id="companyName"
                                                     placeholder="Your business/organization name" required />
                                                 <span id="companyName-error"></span>
@@ -361,7 +434,7 @@
 
                                         <div class="col-sm-4 input-boxes">
                                             <div class="form_group">
-                                                <label for="companySize">Company Size</label>
+                                                <label for="companySize">Company Size <span class="required-star">*</span></label>
                                                 <select id="companySize" name="companySize" required>
                                                     <option value="" disabled selected>Select company size</option>
                                                     <option value="1-10">1-10 employees</option>
@@ -376,7 +449,7 @@
 
                                         <div class="col-sm-4 input-boxes">
                                             <div class="form_group">
-                                                <label for="industry">Industry</label>
+                                                <label for="industry">Industry <span class="required-star">*</span></label>
                                                 <select id="industry" name="industry" required>
                                                     <option value="" disabled selected>Select industry</option>
                                                     <option value="retail">Retail & E-commerce</option>
@@ -393,12 +466,19 @@
                                             </div>
                                         </div>
 
+                                        <!-- Quotation Specific Needs Section -->
+                                        <div class="col-12">
+                                            <div class="form-section-title">
+                                                <i class="fa-regular fa-file-invoice"></i>
+                                                <span>Quotation Specific Needs</span>
+                                            </div>
+                                        </div>
+
                                         <div class="col-sm-4 input-boxes">
                                             <div class="form_group">
-                                                <label for="quoteVolume">Monthly Quote Volume </label>
+                                                <label for="quoteVolume">Monthly Quote Volume <span class="required-star">*</span></label>
                                                 <select id="quoteVolume" name="quoteVolume" required>
-                                                    <option value="" disabled selected>Select monthly quote volume
-                                                    </option>
+                                                    <option value="" disabled selected>Select monthly quote volume</option>
                                                     <option value="less_than_50">Less than 50 quotes</option>
                                                     <option value="50_200">50 - 200 quotes</option>
                                                     <option value="200_500">200 - 500 quotes</option>
@@ -411,10 +491,9 @@
 
                                         <div class="col-sm-4 input-boxes">
                                             <div class="form_group">
-                                                <label for="teamMembers">Team Members</label>
+                                                <label for="teamMembers">Team Members <span class="required-star">*</span></label>
                                                 <select id="teamMembers" name="teamMembers" required>
-                                                    <option value="" disabled selected>Number of team members creating
-                                                        quotes</option>
+                                                    <option value="" disabled selected>Number of team members creating quotes</option>
                                                     <option value="1">1 person</option>
                                                     <option value="2_5">2 - 5 people</option>
                                                     <option value="6_10">6 - 10 people</option>
@@ -427,10 +506,9 @@
 
                                         <div class="col-sm-4 input-boxes">
                                             <div class="form_group">
-                                                <label for="currentProcess">Current Process</label>
+                                                <label for="currentProcess">Current Process <span class="required-star">*</span></label>
                                                 <select id="currentProcess" name="currentProcess" required>
-                                                    <option value="" disabled selected>How do you create quotes now?
-                                                    </option>
+                                                    <option value="" disabled selected>How do you create quotes now?</option>
                                                     <option value="excel">Microsoft Excel / Google Sheets</option>
                                                     <option value="manual">Manual / Paper-based process</option>
                                                     <option value="word">Microsoft Word / Documents</option>
@@ -443,13 +521,20 @@
                                             </div>
                                         </div>
 
+                                        <!-- Message Section -->
+                                        <div class="col-12">
+                                            <div class="form-section-title">
+                                                <i class="fa-regular fa-message"></i>
+                                                <span>Additional Information</span>
+                                            </div>
+                                        </div>
+
                                         <div class="col-sm-12 input-boxes">
                                             <div class="form_group">
-                                                <label for="conMessage" class="form-label visually-hidden">Your
-                                                    Message</label>
+                                                <label for="conMessage">Your Message / Requirements</label>
                                                 <textarea name="conMessage" id="conMessage"
-                                                    placeholder="Tell us about your business needs..." rows="4"
-                                                    required></textarea>
+                                                    placeholder="Tell us about your specific quotation needs, challenges, or any questions you have..." 
+                                                    rows="4"></textarea>
                                                 <span id="conMessage-error"></span>
                                             </div>
                                         </div>
@@ -457,7 +542,7 @@
                                         <div class="col-12">
                                             <div class="form_btn">
                                                 <button type="submit" class="btn bz-btn-primary sign-up">
-                                                    Send Message
+                                                    Request Demo <i class="fa-regular fa-arrow-right"></i>
                                                 </button>
                                             </div>
                                         </div>
@@ -607,7 +692,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"></script>
 
-    <!-- Custom Phone Mapping Implementation -->
+    <!-- Enhanced Form Validation Script -->
     <script>
         (function () {
             'use strict';
